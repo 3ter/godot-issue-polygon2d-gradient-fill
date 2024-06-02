@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgtnrl8bccmbi"]
+
+[sub_resource type="Gradient" id="Gradient_v8nv7"]
+interpolation_mode = 1
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_whwd5"]
+gradient = SubResource("Gradient_v8nv7")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+texture = SubResource("GradientTexture1D_whwd5")
+polygon = PackedVector2Array(0, 0, 300, 0, 300, 300, 0, 300)
