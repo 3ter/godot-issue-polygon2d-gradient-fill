@@ -4,7 +4,6 @@
 
 [sub_resource type="Gradient" id="Gradient_v8nv7"]
 interpolation_mode = 1
-offsets = PackedFloat32Array(0, 0)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_whwd5"]
@@ -14,6 +13,19 @@ width = 300
 [node name="Node2D" type="Node2D"]
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
+visible = false
 texture = SubResource("GradientTexture1D_whwd5")
 polygon = PackedVector2Array(0, 0, 300, 0, 300, 300, 0, 300)
+script = ExtResource("1_p3wud")
+
+[node name="TriangleUpperRight" type="Polygon2D" parent="."]
+visible = false
+texture = SubResource("GradientTexture1D_whwd5")
+polygon = PackedVector2Array(0, 0, 300, 0, 300, 300)
+script = ExtResource("1_p3wud")
+
+[node name="TriangleBottom" type="Polygon2D" parent="."]
+texture = SubResource("GradientTexture1D_whwd5")
+texture_rotation = -1.5708
+polygon = PackedVector2Array(0, 300, 150, 0, 300, 300)
 script = ExtResource("1_p3wud")
