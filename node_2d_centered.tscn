@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://ch2dmhbhh7iyt"]
+
+[ext_resource type="Script" path="res://Polygon2D.gd" id="1_ok1ec"]
+
+[sub_resource type="Gradient" id="Gradient_v8nv7"]
+interpolation_mode = 1
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_whwd5"]
+gradient = SubResource("Gradient_v8nv7")
+width = 300
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+visible = false
+texture = SubResource("GradientTexture1D_whwd5")
+polygon = PackedVector2Array(0, 0, 300, 0, 300, 300, 0, 300)
+script = ExtResource("1_ok1ec")
+
+[node name="TriangleUpperRight" type="Polygon2D" parent="."]
+visible = false
+texture = SubResource("GradientTexture1D_whwd5")
+polygon = PackedVector2Array(0, 0, 300, 0, 300, 300)
+script = ExtResource("1_ok1ec")
+
+[node name="TriangleBottom" type="Polygon2D" parent="."]
+texture = SubResource("GradientTexture1D_whwd5")
+texture_rotation = -1.5708
+polygon = PackedVector2Array(-150, 150, 0, -150, 150, 150)
+uv = PackedVector2Array(0, 0, 1, 0, 0.5, 1)
+script = ExtResource("1_ok1ec")
