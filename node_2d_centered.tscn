@@ -25,8 +25,8 @@ polygon = PackedVector2Array(0, 0, 300, 0, 300, 300)
 script = ExtResource("1_ok1ec")
 
 [node name="TriangleBottom" type="Polygon2D" parent="."]
+position = Vector2(-150, -150)
 texture = SubResource("GradientTexture1D_whwd5")
 texture_rotation = -1.5708
-polygon = PackedVector2Array(-150, 150, 0, -150, 150, 150)
-uv = PackedVector2Array(0, 0, 1, 0, 0.5, 1)
+polygon = PackedVector2Array(0, 300, 150, 0, 300, 300)
 script = ExtResource("1_ok1ec")
